@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<title>Análisis y diseño de Aplicaciones</title>
+		<title>Análisis y Diseño de Aplicaciones</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -26,20 +26,22 @@
 			<div class="slides">
 				<section>
           <img data-src="img/logo_white.png" width="25%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
-          <h2>Análisis y diseño de Aplicaciones</h2>
+          <h2>Análisis y Diseño de Aplicaciones</h2>
           <p>
-            <small>Santiago Moreno</small>
+            <small>Rodrigo Albano</small>
           </p>
         </section>
 
 				<section>
           <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
-          <h2>Indice</h2>
-          <ol>
+          <h2>Índice</h2>
+          <ul>
             <li><a href="#/2">Introducción a la ingeniería de software</a></li>
             <li><a href="#/3">Ingeniería de requerimientos</a></li>
             <li><a href="#/4">Análisis</a></li>
-          </ol>
+            <li><a href="#/5">Diseño</a></li>
+            <li><a href="#/6">Planificación</a></li>
+          </ul>
         </section>
 
         <!--
@@ -58,11 +60,11 @@
               <li>Para el desarrollo de un producto de software se necesita un conjunto estructurado de actividades</li>
               <li>Existen varios modelos de procesos. <br>Todos incluyen:
                 <ol>
-                  <li><span style="color: #2b69a9">Especificación</span></li>
-                  <li><span style="color: #2b69a9">Diseño</span></li>
-                  <li><span style="color: #2b69a9">Implementación</span></li>
-                  <li><span style="color: #2b69a9">Validación</span></li>
-                  <li><span style="color: #2b69a9">Evolución</span></li>
+                  <li><span style="color: #fcfdfe">Especificación</span></li>
+                  <li><span style="color: #fcfdfe">Diseño</span></li>
+                  <li><span style="color: #fcfdfe">Implementación</span></li>
+                  <li><span style="color: #fcfdfe">Validación</span></li>
+                  <li><span style="color: #fcfdfe">Evolución</span></li>
                 </ol>
               </li>
             </ul>
@@ -129,13 +131,13 @@
             <p style="font-size: xx-large">Diseña la estructura del sotware que satisface la especificación</p>
             <ul>
               <li style="font-size: xx-large">
-                <span style="color: #2b69a9">Diseño de Arquitectura:</span> identificar todas las estructuras del sistema, los principales componentes, sus relaciones y como estan distribuidos.
+                <span style="color: #fcfdfe">Diseño de Arquitectura:</span> identificar todas las estructuras del sistema, los principales componentes, sus relaciones y como estan distribuidos.
               </li>
               <li style="font-size: xx-large">
-                <span style="color: #2b69a9">Diseño de la base de datos:</span> diseñar las estructuda del sistema de datos y como van a ser representados en la base
+                <span style="color: #fcfdfe">Diseño de la base de datos:</span> diseñar las estructuda del sistema de datos y como van a ser representados en la base
               </li>
               <li style="font-size: xx-large">
-                <span style="color: #2b69a9">Diseño de la intefaz de usuario:</span> se definen las interfaces ente los componentes del sistema
+                <span style="color: #fcfdfe">Diseño de la intefaz de usuario:</span> se definen las interfaces ente los componentes del sistema
               </li>
             </ul>
           </section>
@@ -186,26 +188,26 @@
           <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Definiciones</h2>
-            <p style="color: #2b69a9">Requisitos</p>
+            <p style="color: #fcfdfe">Requisitos</p>
             <p>Descripción de los servicios que debe brindar un sistema y sus restricciones</p>
             <p>Requisitos definen el Qué (el problema) del sistema</p>
-            <p style="color: #2b69a9">Ingeniería de Requisitos</p>
+            <p style="color: #fcfdfe">Ingeniería de Requisitos</p>
             <p>Proceso de descubrir, analizar, documentar y verificar esos servicios y restricciones</p>
           </section>
 
           <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Definiciones</h2>
-            <p style="color: #2b69a9">Sistema</p>
-            <p>Incluye hardware, software, firmware, personas,información, técnicas, servicios, y otros elementos de soporte</p>
-            <p style="color: #2b69a9">Requisitos del Sistema</p>
+            <p style="color: #fcfdfe">Sistema</p>
+            <p>Incluye hardware, software, firmware, personas, información, técnicas, servicios, y otros elementos de soporte</p>
+            <p style="color: #fcfdfe">Requisitos del Sistema</p>
             <p>Son los requisitos para el sistema entero</p>
-            <p style="color: #2b69a9">Requisitos del Software</p>
+            <p style="color: #fcfdfe">Requisitos del Software</p>
             <p>Se refieren solo al Software</p>
           </section>
 
           <section data-markdown>
-            ## Funcionales
+            ## FUNCIONALES
 
             * Servicios o funciones que proveerá el sistema
             * Describen la interacción entre el sistema y su entorno
@@ -219,14 +221,14 @@
 
           <section data-markdown>
             <script type="text/template">
-            ## no funcionales
+            ## NO FUNCIONALES
 
               * Restricciones a los servicios o funciones ofrecidos por el sistema</li>
               * Describen restricciones que limitan las elecciones para construir una solución</li>
             ```
             Ejemplos
             * Las consultas deben resolverse en menos de 3 segundos
-            * El lenguaje de programación debe ser Java
+            * El lenguaje de programación debe ser PHP
             ```
             </script>
           </section>
@@ -234,10 +236,10 @@
           <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>no funcionales</h2>
-            <p style="color: #2b69a9">Del producto</p>
+            <p style="color: #fcfdfe">Del producto</p>
             <p>Especifican restricciones al comportamiento del producto</p>
             <p>Ej: desempeño, confiabilidad, portabilidad, usabilidad</p>
-            <p style="color: #2b69a9">De la Organización</p>
+            <p style="color: #fcfdfe">De la Organización</p>
             <p>Se derivan de las políticas y procedimientos existentes en la organización del cliente y en la del desarrollador</p>
             <p>Estándares, lenguajes de programación, método de diseño</p>
 
@@ -246,12 +248,12 @@
           <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>no funcionales</h2>
-            <p style="color: #2b69a9">Externos</p>
+            <p style="color: #fcfdfe">Externos</p>
             <p style="font-size: xx-large">Se derivan de factores externos, como:</p>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Interoperabilidad:</span> con otros sistemas</li>
-              <li><span style="color: #2b69a9">Legislativos:</span> privacidad, seguridad</li>
-              <li><span style="color: #2b69a9">Éticos:</span> dependen del contexto, las personas, etc</li>
+              <li><span style="color: #fcfdfe">Interoperabilidad:</span> con otros sistemas</li>
+              <li><span style="color: #fcfdfe">Legislativos:</span> privacidad, seguridad</li>
+              <li><span style="color: #fcfdfe">Éticos:</span> dependen del contexto, las personas, etc</li>
             </ul>
           </section>
 
@@ -283,10 +285,10 @@
 
             <p style="font-size: xx-large">Un caso de uso se compone de:</p>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Nombre</span> que identifica al caso de uso</li>
-              <li><span style="color: #2b69a9">Sinopsis</span> que describe brevemente su objetivo</li>
-              <li><span style="color: #2b69a9">Curso típico de eventos</span> que narra la “historia” más común de los actores durante el uso del sistema</li>
-              <li><span style="color: #2b69a9">Cursos alternativos de eventos</span> que narran las variantes de uso del sistema</li>
+              <li><span style="color: #fcfdfe">Nombre</span> que identifica al caso de uso</li>
+              <li><span style="color: #fcfdfe">Sinopsis</span> que describe brevemente su objetivo</li>
+              <li><span style="color: #fcfdfe">Curso típico de eventos</span> que narra la “historia” más común de los actores durante el uso del sistema</li>
+              <li><span style="color: #fcfdfe">Cursos alternativos de eventos</span> que narran las variantes de uso del sistema</li>
             </ul>
           </section>
           <section>
@@ -345,18 +347,18 @@
             <h2>Modelo de domino</h2>
             <p style="font-size: xx-large">Contenido:</p>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Introducción</span> Breve descripción que sirve como introducción al modelo</li>
-              <li><span style="color: #2b69a9">Conceptos</span> Clases que representan conceptos significativos presentes en el dominio</li>
-              <li><span style="color: #2b69a9">Tipos</span> Data types que describen propiedades de las clases que representan conceptos</li>
-              <li><span style="color: #2b69a9">Relaciones</span> Relaciones de asociación o generalización entre las clases que representan conceptos</li>
-              <li><span style="color: #2b69a9">Diagramas</span> Representaciones (usualmente uno solo) de conceptos, tipos y relaciones presentes en el modelo</li>
+              <li><span style="color: #fcfdfe">Introducción</span> Breve descripción que sirve como introducción al modelo</li>
+              <li><span style="color: #fcfdfe">Conceptos</span> Clases que representan conceptos significativos presentes en el dominio</li>
+              <li><span style="color: #fcfdfe">Tipos</span> Data types que describen propiedades de las clases que representan conceptos</li>
+              <li><span style="color: #fcfdfe">Relaciones</span> Relaciones de asociación o generalización entre las clases que representan conceptos</li>
+              <li><span style="color: #fcfdfe">Diagramas</span> Representaciones (usualmente uno solo) de conceptos, tipos y relaciones presentes en el modelo</li>
             </ul>
           </section>
 
           <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Modelo de domino</h2>
-            <p style="color: #2b69a9">Conceptos</p>
+            <p style="color: #fcfdfe">Conceptos</p>
             <p>Un concepto es una idea, cosa o elemento del problema que se está modelando</p>
             <p>Es necesario identificar aquellos atributos que permitan satisfacer los requerimientos</p>
           </section>
@@ -415,10 +417,11 @@
 
 ![Restricciones](img/empresa.png)
           </section>
-          <section>
+          <!-- Comento diagrama de secuencia. ¿Lo voy a dar? -->
+          <!-- <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h1>Diagramas de Secuencia</h1>
-          </section>
+          </section> -->
         </section>
         <!--
         TEMA 3: Análisis - Fin
@@ -459,10 +462,10 @@
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Arquitectura en capas</h2>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Descripción</span> Organiza el sistema en capas con funcionalidad relacionada con cada capa. Una capa da servicios a la capa de encima.</li>
-              <li><span style="color: #2b69a9">Cuándo</span> Nuevas facilidades encima de sistemas existentes; desarrollo disperso en varios equipos, y cada uno es responsable de una capa de funcionalidad; requisito de seguridad multinivel.</li>
-              <li><span style="color: #2b69a9">Ventajas</span> Permite la sustitución de capas en tanto se conserve la interfaz. Aumentar la confiabilidad, en cada capa pueden incluirse facilidades redundantes (por ejemplo, autenticación).</li>
-              <li><span style="color: #2b69a9">Desventajas</span> Es difícil ofrecer una separación limpia entre capas, El rendimiento suele ser un problema.</li>
+              <li><span style="color: #fcfdfe">Descripción</span> Organiza el sistema en capas con funcionalidad relacionada con cada capa. Una capa da servicios a la capa de encima.</li>
+              <li><span style="color: #fcfdfe">Cuándo</span> Nuevas facilidades encima de sistemas existentes; desarrollo disperso en varios equipos, y cada uno es responsable de una capa de funcionalidad; requisito de seguridad multinivel.</li>
+              <li><span style="color: #fcfdfe">Ventajas</span> Permite la sustitución de capas en tanto se conserve la interfaz. Aumentar la confiabilidad, en cada capa pueden incluirse facilidades redundantes (por ejemplo, autenticación).</li>
+              <li><span style="color: #fcfdfe">Desventajas</span> Es difícil ofrecer una separación limpia entre capas, El rendimiento suele ser un problema.</li>
             </ul>
           </section>
 
@@ -476,10 +479,10 @@
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Arquitectura de repositorio</h2>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Descripción</span> Todos los datos en un sistema se gestionan en un repositorio central, accesible a todos los componentes del. Los componentes no interactúan directamente.</li>
-              <li><span style="color: #2b69a9">Cuándo</span> Grandes volúmenes de información o sistemas dirigidos por datos.</li>
-              <li><span style="color: #2b69a9">Ventajas</span> Los componentes no necesitan conocer la existencia de otros componentes. Los cambios se propagan hacia todos los componentes. Gestión consistente y centralizada de los datos.</li>
-              <li><span style="color: #2b69a9">Desventajas</span> Problemas en el repositorio afectan a todo el sistema. Posibles ineficiencias en la comunicación. Posibles dificultades al distribuir el repositorio.</li>
+              <li><span style="color: #fcfdfe">Descripción</span> Todos los datos en un sistema se gestionan en un repositorio central, accesible a todos los componentes del. Los componentes no interactúan directamente.</li>
+              <li><span style="color: #fcfdfe">Cuándo</span> Grandes volúmenes de información o sistemas dirigidos por datos.</li>
+              <li><span style="color: #fcfdfe">Ventajas</span> Los componentes no necesitan conocer la existencia de otros componentes. Los cambios se propagan hacia todos los componentes. Gestión consistente y centralizada de los datos.</li>
+              <li><span style="color: #fcfdfe">Desventajas</span> Problemas en el repositorio afectan a todo el sistema. Posibles ineficiencias en la comunicación. Posibles dificultades al distribuir el repositorio.</li>
             </ul>
           </section>
 
@@ -493,10 +496,10 @@
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Arquitectura de cliente - servidor</h2>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Descripción</span> La funcionalidad del sistema se organiza en servicios, y cada servicio lo entrega un servidor independiente. Los clientes son usuarios de dichos servicios</li>
-              <li><span style="color: #2b69a9">Cuándo</span> Se usa cuando, desde varias ubicaciones, se tiene que ingresar a los datos en una base de datos compartida. También cuando la carga es variable (replicación de servidores).</li>
-              <li><span style="color: #2b69a9">Ventajas</span> Los servidores se pueden distribuir a través de una red. La funcionalidad general estaría disponible a todos los clientes, no necesita implementarse en todos los servicios.</li>
-              <li><span style="color: #2b69a9">Desventajas</span> Cada servicio son puntos de falla. El rendimiento depende de la red, así como del sistema. Posibles problemas administrativos cuando los servidores son propiedad de diferentes organizaciones.</li>
+              <li><span style="color: #fcfdfe">Descripción</span> La funcionalidad del sistema se organiza en servicios, y cada servicio lo entrega un servidor independiente. Los clientes son usuarios de dichos servicios</li>
+              <li><span style="color: #fcfdfe">Cuándo</span> Se usa cuando, desde varias ubicaciones, se tiene que ingresar a los datos en una base de datos compartida. También cuando la carga es variable (replicación de servidores).</li>
+              <li><span style="color: #fcfdfe">Ventajas</span> Los servidores se pueden distribuir a través de una red. La funcionalidad general estaría disponible a todos los clientes, no necesita implementarse en todos los servicios.</li>
+              <li><span style="color: #fcfdfe">Desventajas</span> Cada servicio son puntos de falla. El rendimiento depende de la red, así como del sistema. Posibles problemas administrativos cuando los servidores son propiedad de diferentes organizaciones.</li>
             </ul>
           </section>
 
@@ -510,10 +513,10 @@
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
             <h2>Arquitectura de tubería</h2>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Descripción</span> Cada componente de procesamiento es discreto y realiza un tipo de transformación de datos. Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.</li>
-              <li><span style="color: #2b69a9">Cuándo</span> Se suele utilizar en aplicaciones de procesamiento de datos, donde las entradas se procesan en etapas separadas para generar salidas relacionadas</li>
-              <li><span style="color: #2b69a9">Ventajas</span> Fácil de entender y soporta reutilización. El estilo del flujo de trabajo coincide con la estructura de muchos procesos empresariales.</li>
-              <li><span style="color: #2b69a9">Desventajas</span> El formato debe acordarse y respetarse. Esto aumenta la carga del sistema, y puede significar que sea imposible reutilizar transformaciones funcionales que usen otros formatos.</li>
+              <li><span style="color: #fcfdfe">Descripción</span> Cada componente de procesamiento es discreto y realiza un tipo de transformación de datos. Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.</li>
+              <li><span style="color: #fcfdfe">Cuándo</span> Se suele utilizar en aplicaciones de procesamiento de datos, donde las entradas se procesan en etapas separadas para generar salidas relacionadas</li>
+              <li><span style="color: #fcfdfe">Ventajas</span> Fácil de entender y soporta reutilización. El estilo del flujo de trabajo coincide con la estructura de muchos procesos empresariales.</li>
+              <li><span style="color: #fcfdfe">Desventajas</span> El formato debe acordarse y respetarse. Esto aumenta la carga del sistema, y puede significar que sea imposible reutilizar transformaciones funcionales que usen otros formatos.</li>
             </ul>
           </section>
 
@@ -540,9 +543,9 @@
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
 						<h2>Planificacion</h2>
             <ul style="font-size: xx-large">
-              <li><span style="color: #2b69a9">Que</span> Que tareas realizar</li>
-              <li><span style="color: #2b69a9">Cuándo</span> Cuando se van a realizar. Tener en cuenta dependencias.</li>
-              <li><span style="color: #2b69a9">Recursos</span> Se tienen en cuenta los recursos (tiempo, personal, dinero).</li>
+              <li><span style="color: #fcfdfe">Qué</span> tareas realizar.</li>
+              <li><span style="color: #fcfdfe">Cuándo</span> se van a realizar. Tener en cuenta dependencias.</li>
+              <li><span style="color: #fcfdfe">Recursos</span> Se tienen en cuenta los recursos (tiempo, personal, dinero).</li>
             </ul>
           </section>
 
