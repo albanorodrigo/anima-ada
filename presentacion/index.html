@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<title>Análisis y diseño de Aplicaciones</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+          <img data-src="img/logo_white.png" width="25%" height="25%" style="margin: none; background: none; border: none; box-shadow: none;">
+          <h2>Análisis y diseño de Aplicaciones</h2>
+          <p>
+            <small>Santiago Moreno</small>
+          </p>
+        </section>
+
+				<section>
+          <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+          <h2>Indice</h2>
+          <ol>
+            <li><a href="#/2">Introducción a la ingeniería de software</a></li>
+            <li><a href="#/3">Ingeniería de requerimientos</a></li>
+            <li><a href="#/4">Análisis</a></li>
+          </ol>
+        </section>
+
+        <!--
+        TEMA 1: Introducción - inicio
+        -->
+        <section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Introducción a la ingeniería de software</h2>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>El proceso del software</h2>
+            <ul>
+              <li>Para el desarrollo de un producto de software se necesita un conjunto estructurado de actividades</li>
+              <li>Existen varios modelos de procesos. <br>Todos incluyen:
+                <ol>
+                  <li><span style="color: #2b69a9">Especificación</span></li>
+                  <li><span style="color: #2b69a9">Diseño</span></li>
+                  <li><span style="color: #2b69a9">Implementación</span></li>
+                  <li><span style="color: #2b69a9">Validación</span></li>
+                  <li><span style="color: #2b69a9">Evolución</span></li>
+                </ol>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Clasificaciones</h2>
+            <ul>
+              <li>Procesos dirigidos por planes</li>
+              <li>Procesos ágiles</li>
+            </ul>
+            <p>En la practica los procesos incluyen elementos de ambos enfoques</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo en cascada</h2>
+            <img src="img/modelo_de_cascada.png" width="80%" height="80%">
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo en cascada - Problemas</h2>
+
+              <p>Dificultad de responder a los cambios de requerimientos del cliente</p>
+              <p>Entrega tardía de valor para el cliente</p>
+
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo Incremental</h2>
+            <img src="img/modelo_incremental.png" width="80%" height="80%">
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo Incremental - Beneficios</h2>
+            <p>Se reduce el costo de acomodar los cambios en los requisitos</p>
+            <p>Es más fácil obtener retroalimentación del cliente</p>
+            <p>Se pueden realizar entregas más rápidas de software</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo Incremental - Problemas</h2>
+            <p>Trazabilidad de los cambios</p>
+            <p>Degradado del sistema</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Especificación</h2>
+            <ul>
+              <li>Relevamiento y análisis de requisitos</li>
+              <li>Especificación de requisitos</li>
+              <li>Validación de requisitos</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Diseño</h2>
+            <p style="font-size: xx-large">Diseña la estructura del sotware que satisface la especificación</p>
+            <ul>
+              <li style="font-size: xx-large">
+                <span style="color: #2b69a9">Diseño de Arquitectura:</span> identificar todas las estructuras del sistema, los principales componentes, sus relaciones y como estan distribuidos.
+              </li>
+              <li style="font-size: xx-large">
+                <span style="color: #2b69a9">Diseño de la base de datos:</span> diseñar las estructuda del sistema de datos y como van a ser representados en la base
+              </li>
+              <li style="font-size: xx-large">
+                <span style="color: #2b69a9">Diseño de la intefaz de usuario:</span> se definen las interfaces ente los componentes del sistema
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Implementación</h2>
+            <p>El programa es desarrollado mediante la implementación.</p>
+            <p>Puede ser un programa único o varios programas.</p>
+            <p>El diseño y la implementación son actividades por lo general intercaladas</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Validación</h2>
+            <p>La validación y verificación pretende mostrar que el sistema se ajusta a su especificación y cumple con los requisitos del cliente</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Validación - Etapas</h2>
+            <ul>
+              <li>Pruebas Unitarias</li>
+              <li>Pruebas de sistema o integración</li>
+              <li>Pruebas de aceptación</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Ingeniería de software</h2>
+            <p>Es una disciplina de la ingeniería que se ocupa de todos los aspectos de la producción de software desde las primeras etapas de la especificación del sistema hasta el mantenimiento del sistema una vez que se ha puesto en uso.</p>
+          </section>
+        </section>
+        <!--
+        TEMA 1: Introducción - Fin
+        -->
+
+        <!--
+        TEMA 2: Requerimientos - Inicio
+				-->
+        <section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Ingeniería de requerimientos</h2>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Definiciones</h2>
+            <p style="color: #2b69a9">Requisitos</p>
+            <p>Descripción de los servicios que debe brindar un sistema y sus restricciones</p>
+            <p>Requisitos definen el Qué (el problema) del sistema</p>
+            <p style="color: #2b69a9">Ingeniería de Requisitos</p>
+            <p>Proceso de descubrir, analizar, documentar y verificar esos servicios y restricciones</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Definiciones</h2>
+            <p style="color: #2b69a9">Sistema</p>
+            <p>Incluye hardware, software, firmware, personas,información, técnicas, servicios, y otros elementos de soporte</p>
+            <p style="color: #2b69a9">Requisitos del Sistema</p>
+            <p>Son los requisitos para el sistema entero</p>
+            <p style="color: #2b69a9">Requisitos del Software</p>
+            <p>Se refieren solo al Software</p>
+          </section>
+
+          <section data-markdown>
+            ## Funcionales
+
+            * Servicios o funciones que proveerá el sistema
+            * Describen la interacción entre el sistema y su entorno
+
+            ```
+            Ejemplos
+            * Se deben ingresar cédula, nombre y teléfono de cada cliente
+            * Se quiere un listado de los clientes por zona
+            ```
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+            ## no funcionales
+
+              * Restricciones a los servicios o funciones ofrecidos por el sistema</li>
+              * Describen restricciones que limitan las elecciones para construir una solución</li>
+            ```
+            Ejemplos
+            * Las consultas deben resolverse en menos de 3 segundos
+            * El lenguaje de programación debe ser Java
+            ```
+            </script>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>no funcionales</h2>
+            <p style="color: #2b69a9">Del producto</p>
+            <p>Especifican restricciones al comportamiento del producto</p>
+            <p>Ej: desempeño, confiabilidad, portabilidad, usabilidad</p>
+            <p style="color: #2b69a9">De la Organización</p>
+            <p>Se derivan de las políticas y procedimientos existentes en la organización del cliente y en la del desarrollador</p>
+            <p>Estándares, lenguajes de programación, método de diseño</p>
+
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>no funcionales</h2>
+            <p style="color: #2b69a9">Externos</p>
+            <p style="font-size: xx-large">Se derivan de factores externos, como:</p>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Interoperabilidad:</span> con otros sistemas</li>
+              <li><span style="color: #2b69a9">Legislativos:</span> privacidad, seguridad</li>
+              <li><span style="color: #2b69a9">Éticos:</span> dependen del contexto, las personas, etc</li>
+            </ul>
+          </section>
+
+        </section>
+        <!--
+        TEMA 2: Requerimientos - Fin
+        -->
+
+        <!--
+        TEMA 3: Análisis - Inicio
+				-->
+        <section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Análisis</h2>
+          </section>
+          <section data-markdown>
+            ## Casos de Uso
+
+            * El enfoque de casos de uso está basado en la noción de actor
+            * Un actor es un agente externo (humano o no) que interactúa directamente con el sistema
+            * Un caso de uso narra la historia completa (junto a todas sus variantes) de un conjunto de actores mientras usan el sistema
+
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Casos de Uso</h2>
+
+            <p style="font-size: xx-large">Un caso de uso se compone de:</p>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Nombre</span> que identifica al caso de uso</li>
+              <li><span style="color: #2b69a9">Sinopsis</span> que describe brevemente su objetivo</li>
+              <li><span style="color: #2b69a9">Curso típico de eventos</span> que narra la “historia” más común de los actores durante el uso del sistema</li>
+              <li><span style="color: #2b69a9">Cursos alternativos de eventos</span> que narran las variantes de uso del sistema</li>
+            </ul>
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Casos de Uso</h2>
+            <table style="font-size: x-large">
+                <tr>
+                  <td>Nombre</td>
+                  <td>Escribir Email</td>
+                </tr>
+                <tr>
+                  <td>Actor</td>
+                  <td>Usuario</td>
+                </tr>
+                <tr>
+                  <td>Descripción</td>
+                  <td>El caso de uso comienza cuando el Usuario desea escribir un correo electrónico. Para ello especifica el cuerpo del correo electrónico y un asunto. Luego si lo desea el usuario puede adjuntar uno o más archivos de su disco duro en el email. Al finalizar de escribir el email el sistema especifica una lista de contactos y el usuario selecciona opcionalmente uno o más destinatarios. Para cada destinatario puede especificar que tipo de destinatario se trata (Principal, Con Copia o Con Copia oculta). Luego el usuario puede elegir más destinatarios escribiendo manualmente sus correos electrónicos y el tipo de destinatario al igual que lo hizo antes. Al finalizar el sistema envía el correo y lo copia en la carpeta ‘Enviados’</td>
+                </tr>
+            </table>
+          </section>
+          <section data-markdown style="font-size: x-large">
+            ### Casos de Uso - Exp
+
+            **Caso de Uso:** Escribir Email
+
+            **Actores:** Cliente
+
+            **Sinopsis:** El caso de uso comienza cuando el Usuario desea escribir un correo electrónico.
+
+            **Escenario Típico:**
+
+            1. Usuario especifica Cuerpo del correo y el asunto
+            2. El Sistema muestra una lista de contactos
+            3. El Usuario selecciona contactos y especifica para cada uno el tipo de destinatario
+            4. El Usuario especifica más destinatarios escribiendo sus nombres y el tipo de destinatario
+            5. El Usuario hace click en un botón Enviar
+            6. El Sistema envía el mail
+            7. El Sistema copia el mail a la carpeta Enviados
+
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo de dominio</h2>
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelado de dominio</h2>
+            <ul style="font-size: xx-large">
+              <li>Consiste en encontrar y describir los conceptos en el dominio de la aplicación</li>
+              <li>Descompone el problema en conceptos individuales</li>
+              <li>Se construye el Modelo de Dominio</li>
+            </ul>
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo de domino</h2>
+            <p style="font-size: xx-large">Contenido:</p>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Introducción</span> Breve descripción que sirve como introducción al modelo</li>
+              <li><span style="color: #2b69a9">Conceptos</span> Clases que representan conceptos significativos presentes en el dominio</li>
+              <li><span style="color: #2b69a9">Tipos</span> Data types que describen propiedades de las clases que representan conceptos</li>
+              <li><span style="color: #2b69a9">Relaciones</span> Relaciones de asociación o generalización entre las clases que representan conceptos</li>
+              <li><span style="color: #2b69a9">Diagramas</span> Representaciones (usualmente uno solo) de conceptos, tipos y relaciones presentes en el modelo</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Modelo de domino</h2>
+            <p style="color: #2b69a9">Conceptos</p>
+            <p>Un concepto es una idea, cosa o elemento del problema que se está modelando</p>
+            <p>Es necesario identificar aquellos atributos que permitan satisfacer los requerimientos</p>
+          </section>
+
+          <section data-markdown style="font-size: xx-large">
+            ### Modelo de domino
+            **Agregación**
+
+              Es una forma más fuerte de asociación
+              * Significa que un elemento es parte de otro
+              * Existen dos variantes
+                * Agregación compartida
+                * Agregación compuesta
+
+          </section>
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Agregación compartida**
+
+![Agregación compartida](img/agregation.png)
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Agregación compuesta**
+
+![Agregación compuesta](img/agregation_composed.png)
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Generalización**
+
+![Generalización](img/generalization.png)
+          </section>
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Associación**
+
+![Associación](img/association.png)
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Restricciones**
+
+            * **Unicidad de Atributos:** No hay dos productos con el mismo código
+            * **Dominio de Atributos:** En la empresa no puede haber vendedores menores de 18 años
+            * **Integridad Circular:** Un vendedor no puede vender productos de una empresa en la que no trabaja
+            * **Atributos Calculados:** El atributo cantEmp es la cantidad de empleados de la empresa
+            * **Reglas de Negocio:** “Ningún vendedor menor de 30 años puede vender el producto de código X
+          </section>
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Restricciones**
+
+![Restricciones](img/empresa.png)
+          </section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h1>Diagramas de Secuencia</h1>
+          </section>
+        </section>
+        <!--
+        TEMA 3: Análisis - Fin
+        -->
+
+        <!--
+        TEMA 4: Diseño - Inicio
+				-->
+        <section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Diseño</h2>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Diseño de Arquitectura</h2>
+            <p>El objetivo es establecer la estructura global del sistema y cómo se debe organizar</p>
+            <p>Identificación de los principales componentes del sistema y sus relaciones</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Patrones de Arquitectura</h2>
+            <p>Un patrón es una descripción abstracta de buena práctica, que se ensayó y puso a prueba en diferentes sistemas y entornos.</p>
+            <p>Describe una organización de sistema que ha tenido éxito en sistemas previos.</p>
+            <p>Incluye información sobre cuándo es y cuándo no es adecuado usar dicho patrón, así como las fortalezas y debilidades del patrón.</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Beneficios de utilizar Patrones</h2>
+            <p>Permite seleccionar una solución entendible y probada a ciertos problemas, definiendo los principios organizativos del sistema.</p>
+            <p>Al basar la arquitectura en estilos que son conocidos se facilita comunicar las características importantes de la misma.</p>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura en capas</h2>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Descripción</span> Organiza el sistema en capas con funcionalidad relacionada con cada capa. Una capa da servicios a la capa de encima.</li>
+              <li><span style="color: #2b69a9">Cuándo</span> Nuevas facilidades encima de sistemas existentes; desarrollo disperso en varios equipos, y cada uno es responsable de una capa de funcionalidad; requisito de seguridad multinivel.</li>
+              <li><span style="color: #2b69a9">Ventajas</span> Permite la sustitución de capas en tanto se conserve la interfaz. Aumentar la confiabilidad, en cada capa pueden incluirse facilidades redundantes (por ejemplo, autenticación).</li>
+              <li><span style="color: #2b69a9">Desventajas</span> Es difícil ofrecer una separación limpia entre capas, El rendimiento suele ser un problema.</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura en capas</h2>
+            <img src="img/diseno_capas.png" width="80%" height="80%">
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de repositorio</h2>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Descripción</span> Todos los datos en un sistema se gestionan en un repositorio central, accesible a todos los componentes del. Los componentes no interactúan directamente.</li>
+              <li><span style="color: #2b69a9">Cuándo</span> Grandes volúmenes de información o sistemas dirigidos por datos.</li>
+              <li><span style="color: #2b69a9">Ventajas</span> Los componentes no necesitan conocer la existencia de otros componentes. Los cambios se propagan hacia todos los componentes. Gestión consistente y centralizada de los datos.</li>
+              <li><span style="color: #2b69a9">Desventajas</span> Problemas en el repositorio afectan a todo el sistema. Posibles ineficiencias en la comunicación. Posibles dificultades al distribuir el repositorio.</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de repositorio</h2>
+            <img src="img/diseno_repositorio.png" width="80%" height="80%">
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de cliente - servidor</h2>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Descripción</span> La funcionalidad del sistema se organiza en servicios, y cada servicio lo entrega un servidor independiente. Los clientes son usuarios de dichos servicios</li>
+              <li><span style="color: #2b69a9">Cuándo</span> Se usa cuando, desde varias ubicaciones, se tiene que ingresar a los datos en una base de datos compartida. También cuando la carga es variable (replicación de servidores).</li>
+              <li><span style="color: #2b69a9">Ventajas</span> Los servidores se pueden distribuir a través de una red. La funcionalidad general estaría disponible a todos los clientes, no necesita implementarse en todos los servicios.</li>
+              <li><span style="color: #2b69a9">Desventajas</span> Cada servicio son puntos de falla. El rendimiento depende de la red, así como del sistema. Posibles problemas administrativos cuando los servidores son propiedad de diferentes organizaciones.</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de cliente - servidor</h2>
+            <img src="img/diseno_cli_serv.png" width="80%" height="80%">
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de tubería</h2>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Descripción</span> Cada componente de procesamiento es discreto y realiza un tipo de transformación de datos. Los datos fluyen (como en una tubería) de un componente a otro para su procesamiento.</li>
+              <li><span style="color: #2b69a9">Cuándo</span> Se suele utilizar en aplicaciones de procesamiento de datos, donde las entradas se procesan en etapas separadas para generar salidas relacionadas</li>
+              <li><span style="color: #2b69a9">Ventajas</span> Fácil de entender y soporta reutilización. El estilo del flujo de trabajo coincide con la estructura de muchos procesos empresariales.</li>
+              <li><span style="color: #2b69a9">Desventajas</span> El formato debe acordarse y respetarse. Esto aumenta la carga del sistema, y puede significar que sea imposible reutilizar transformaciones funcionales que usen otros formatos.</li>
+            </ul>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Arquitectura de tubería</h2>
+            <img src="img/diseno_tuberia.png" width="80%" height="80%">
+          </section>
+					<!--
+					TEMA 4: Diseño - Fin
+					-->
+        </section>
+
+				<!--
+        TEMA 5: Planificacion - inicio
+        -->
+				<section>
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Planificacion</h2>
+          </section>
+
+					<section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+						<h2>Planificacion</h2>
+            <ul style="font-size: xx-large">
+              <li><span style="color: #2b69a9">Que</span> Que tareas realizar</li>
+              <li><span style="color: #2b69a9">Cuándo</span> Cuando se van a realizar. Tener en cuenta dependencias.</li>
+              <li><span style="color: #2b69a9">Recursos</span> Se tienen en cuenta los recursos (tiempo, personal, dinero).</li>
+            </ul>
+          </section>
+
+					<section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+						<h2>Pert</h2>
+						<ul style="font-size: xx-large">
+							<li>Diagrama que representa las tareas a realizar</li>
+							<li>Relacion de dependencia entre las tareas</li>
+							<li>Identifica que tareas no pueden retrasarse, cuales si y cuanto tiempo</li>
+							<li>Parte de la base que estan identificados los tiempos y las dependencias</li>
+						</ul>
+          </section>
+
+					<section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+						<h2>Pert</h2>
+						<ul style="font-size: xx-large">
+							<li>Representamos la duracion de cada tarea</li>
+							<li>Representamos la fecha mas temprana en la que se puede empezar cada tarea</li>
+							<li>Representamos la fecha mas tardia en la que se puede empezar cada tarea</li>
+						</ul>
+          </section>
+
+					<section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+						<h2>Gantt</h2>
+						<ul style="font-size: xx-large">
+							<li>Muy utilizado en la industra de Software</li>
+							<li>Representamos las tareas en una linea de tiempo</li>
+							<li>No solo manejamos duracion sino que tambien fechas</li>
+							<li>No esta optimizado como PERT, pero se puede realizar posteriormente</li>
+						</ul>
+          </section>
+
+					<!--
+					TEMA 5: Planificacion - Fin
+					-->
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
