@@ -28,10 +28,10 @@ Factura,y deja registrados esos mismos datos en la Base para poder controlar a p
 contabilidad.</p>
 
 <br>
-<p>1. De acuerdo al enunciado anterior, revise los requerimientos para determinar si hay algun problema, por ejemple constencia, ambiguedad, conflictos. ¿
+<p>1. De acuerdo al enunciado anterior, revise los requerimientos para determinar si hay algun problema, por ejemple consistencia, ambiguedad, conflictos. ¿
 Contiene alguna decisión de diseño o de implementación?</p>
-<p>A. Utilizando el formato de documento de definición de requerimientos visto en clase, describa los requerimientos para este problema</p>
-<p>B. Piense par este problem requerimientos no funcionales de tipo
+<p>A. Describa los requerimientos para este problema</p>
+<p>B. Piense para este problema, requerimientos no funcionales de tipo:
 <ol>
 <li>Del producto</li>
 <li>De la organización</li>
@@ -40,10 +40,10 @@ Contiene alguna decisión de diseño o de implementación?</p>
 </p>
 
 <p>2. A veces un cliente plantea un requerimiento que uested sabe es imposible de implementar. ¿Qué deberia hacer, incluir el requerimiento en los documentos de definición y especificación pensando
-en más adelante encontrar alguna forma de cumplrlo o pensando en pedir más adelante que sea dejado de lado? Discuta las implicancias éticas de prometer lo que sabe no puede brindar.</p>
-<p>3. A veces parte de un sistema se puede construir rápidamente para mostrar la factibilidad o la funcionalidad al cliente. Normalmente ese prototipo es incompleto. El sistema real se constriye después que el cliente y el desarrollador
+en más adelante encontrar alguna forma de cumplirlo o pensando en pedir más adelante que sea dejado de lado? Discuta las implicancias éticas de prometer lo que sabe no puede brindar.</p>
+<p>3. A veces parte de un sistema se puede construir rápidamente para mostrar la factibilidad o la funcionalidad al cliente. Normalmente ese prototipo es incompleto. El sistema real se construye después que el cliente y el desarrollador
 evalúan el prototipo. ¿Cuando debiera escribirse el documento de requerimientos del sistema, antes o después de desarrollar el prototipo? ¿Por qué?</p>
-<p>4. ¿Qué tipo de problemas se pdeben buscar al hacer una revisión de los requerimientos? Construya una lista de verificación para esos problemas. ¿Es posible tener una lista universal o es mejor disponer de una lista específica para el area de aplicación?<p/>
+<p>4. ¿Qué tipo de problemas se deben buscar al hacer una revisión de los requerimientos? Construya una lista de verificación para esos problemas. ¿Es posible tener una lista universal o es mejor disponer de una lista específica para el area de aplicación?<p/>
 
 <p>5. De acuerdo al enunciado anterior:
 <ol>
