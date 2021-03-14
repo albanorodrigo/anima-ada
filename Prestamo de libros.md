@@ -2,6 +2,7 @@
 
 Considerar el Modelo de Dominio presentado en el siguiente diagrama
 
+<img width="733" alt="56707934-49092b80-66f1-11e9-935f-704c81355dc8" src="https://user-images.githubusercontent.com/33643442/111085652-06c08180-84f7-11eb-8298-d87b306a060b.png">
 
 
 Realizar los Diagramas de Secuencia del Sistema para los siguientes casos de uso:
