@@ -564,6 +564,46 @@
 
 ![Restricciones](img/empresa.png)
           </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Notación - Roles**
+
+            * Especifican el papel que juegan las clases en una asociación
+            * Pueden ser necesarios para eliminar ambigüedades
+![Restricciones](img/MD - Notacion_Roles.png)
+            * ¿p1 es dueño o empleado de e?  ¿y p2?
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Notación - Restricciones**
+
+            * En ocasiones es necesario especificar que existe una restricción entre dos asociaciones
+            * Por ejemplo, que un par de instancias solo estén conectadas mediante una asociación
+![Restricciones](img/MD - Notacion_Restricciones.png)
+
+            * De esta forma una persona no puede ser dueño Y empleado de la misma empresa
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Notación - Restricciones (2)**
+
+            * Otro ejemplo, si dos instancias están conectadas por una asociación, también lo deben estar por otra asociación
+            ![Restricciones](img/MD - Notacion_Restricciones2.png)
+            * De esta forma una persona que sea dueña de la empresa TIENE que ser empleado
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Modelo de domino
+            **Notación - Restricciones (3)**
+
+            * Es posible también indicar que existe un orden entre las instancias con las cuales otra instancia está relacionada
+![Restricciones](img/MD - Notacion_Restricciones3.png)
+            * Aquí interesa el orden de los alumnos en cada curso (por ejemplo por cédula)
+          </section>
+
           <!-- Comento diagrama de secuencia. ¿Lo voy a dar? -->
           <!-- <section>
             <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
