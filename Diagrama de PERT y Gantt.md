@@ -11,9 +11,9 @@
 
 <table>
   <tr>
-    <td><b>Tarea</b></td>
-    <td><b>Dependencia</b></td>
-    <td><b>Duración</b></td>
+    <td><b>Actividad</b></td>
+    <td><b>Precedencia</b></td>
+    <td><b>Duración días</b></td>
   </tr>
   <tr>
     <td>A</td>
