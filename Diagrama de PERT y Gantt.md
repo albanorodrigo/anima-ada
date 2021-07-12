@@ -1,6 +1,13 @@
 <h2>Diagrama de PERT y Gantt</h2>
 
-Realice el diagrama PERT y luego uno de Gantt según lo visto en clase.
+<ol>
+  <li>Realice el Diagrama de PERT</li>
+  <li>Identifique el Camino Crítico</li>
+  <li>¿Cual es la tarea/s con mayor Holgura? ¿De cuanto?</li>
+  <li>Realice el Diagrama de GANTT - Fechas Tempranas</li>
+  <li>Realice el Diagrama de GANTT - Fechas Tardías</li>
+</ol>
+
 
 <table>
   <tr>
