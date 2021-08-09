@@ -6,7 +6,7 @@ solicitado. Para cada caso analice las ventajas y desventajas del modelo, e indi
 utilizar otro estilo arquitectónico (o combinación de estilos). En caso afirmativo, justifique
 adecuadamente su decisión y realice además el modelo alternativo. 
 </p>
-<h5>Tubos y filtros</h5>
+<h5>A</h5>
 <p>Se desea contar con un sistema capaz de mejorar la calidad del sonido de escuchas
 telefónicas, grabación a distancia de conversaciones, etc. El sonido será digitalizado y a
 partir de allí se lo someterá a diversas transformaciones para mejorar su calidad. Las transformaciones posibles son: </p>
@@ -20,13 +20,13 @@ partir de allí se lo someterá a diversas transformaciones para mejorar su cali
 <p>El usuario puede determinar en cualquier paso si desea escuchar el resultado. Cada vez que se realiza una mejora a la calidad del sonido, es el usuario quien decide qué operación de las
   disponibles desea realizar.</p>
  
-<h5>Sistemas en capas o estratificados</h5>
+<h5>B</h5>
 <p>Los pacientes de una guardia de terapia intensiva son monitoreados por dispositivos electrónicos análogos adosados a sus cuerpos. Los dispositivos miden los signos vitales de los pacientes. Hay un sensor para el ritmo cardíaco (activo, una señal para cada latido del
 corazón), presión sanguínea (pasivo) y la temperatura (pasivo). Se necesita un programa que lea los signos vitales con una frecuencia especificada para cada paciente. Los valores leídos
 serán comparados con rangos que serán reportadas con mensajes de alarma en el monitor del box de enfermería. También debe mostrarse un mensaje apropiado si falla un dispositivo. Además, se requiere almacenar los datos y proveer reportes estadísticos.
 </p>
  
-<h5>Sistemas basados en eventos</h5>
+<h5>C</h5>
 <p>
 Debido al gran éxito de la película “El código Da Vinci”, mayor cantidad de personas se ha acercado al Museo del Louvre para conocer las obras de Leonardo Da Vinci, en especial, “La
 Mona Lisa”. Esta obra ha sido cambiada a una sala más importante para que pueda ser mejor apreciada por el público. Entre las tantas medidas de seguridad tomadas, se instaló
