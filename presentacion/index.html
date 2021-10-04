@@ -41,6 +41,7 @@
             <li><a href="#/4">Análisis</a></li>
             <li><a href="#/5">Diseño</a></li>
             <li><a href="#/6">Planificación</a></li>
+            <li><a href="#/7">Diagrama de Secuencia</a></li>
           </ul>
         </section>
 
@@ -604,12 +605,8 @@
             * Aquí interesa el orden de los alumnos en cada curso (por ejemplo por cédula)
           </section>
 
-          <!-- Comento diagrama de secuencia. ¿Lo voy a dar? -->
-          <!-- <section>
-            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
-            <h1>Diagramas de Secuencia</h1>
-          </section> -->
-        </section>
+        </section>  
+        
         <!--
         TEMA 3: Análisis - Fin
         -->
@@ -818,10 +815,94 @@
 							<li>No esta optimizado como PERT, pero se puede realizar posteriormente</li>
 						</ul>
           </section>
-
+        </section>
 					<!--
 					TEMA 5: Planificacion - Fin
 					-->
+
+          <!-- TEMA 6: Diagrama de Secuencia -->
+          <section>
+            <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Diagrama de Secuencia</h2>
+          </section>
+
+          <section>
+            <img data-src="img/logo_white.png" style="background: none; border: none; box-shadow: none; position: fixed; top: 0; right: 0; height: 100px;">
+            <h2>Diagrama de Secuencia</h2>
+            <ul style="font-size: xx-large">
+              <li>Se utiliza para ilustrar las interacciones entre las partes de un sistema, en un solo caso de uso.</li>
+              <li>Ilustran la forma en que las diferentes partes de un sistema interactúan entre sí para llevar a cabo una función.</li>
+            </ul>
+          </section>
+
+          <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Notación de linea de vida**
+
+![DiagramaSecuencia](img/NotacionDiagramaSecuencia.PNG)
+            * Un diagrama de secuencia está estructurado de tal manera que representa una línea de tiempo que comienza en la parte superior y desciende gradualmente para marcar la secuencia de interacciones. Cada objeto tiene una columna y los mensajes intercambiados entre ellos están representados por flechas
+          </section>
+          <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Notación de linea de vida**
+
+![DiagramaSecuencia](img/NotacionDiagramaSecuencia2.PNG)
+            * Ninguna de las dos anotaciones de la línea de vida debe superponerse. Representan los diferentes objetos o partes que interactúan entre sí en el sistema durante la secuencia.
+
+            * Una notación de línea de vida con un símbolo de elemento actor se utiliza cuando el diagrama de secuencia particular es propiedad de un caso de uso.
+        </section>
+        <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Barra de activación**
+
+![DiagramaSecuencia](img/DiagramaSecuenciaBarraActivacion.PNG)
+            * Barras de activación de la línea de vida dealtcontrolalt La barra de activación es la caja que se coloca en la línea de vida.  Se utiliza para indicar que un objeto está activo (o instanciado) durante una interacción entre dos objetos.
+
+            * En un diagrama de secuencia, una interacción entre dos objetos ocurre cuando un objeto envía un mensaje a otro.
+        </section>
+        <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Barra de activación**
+
+            * El uso de la barra de activación en los salvavidas del Llamador de mensajes (el objeto que envía el mensaje) y del Receptor de mensajes (el objeto que recibe el mensaje) indica que ambos están activos/están instanciados durante el intercambio del mensaje.
+
+            * Fechas de mensaje: Una flecha desde el Llamador de Mensajes hasta el Receptor de Mensajes especifica un mensaje en un diagrama de secuencia.
+            Un mensaje puede fluir en cualquier dirección; de izquierda a derecha, de derecha a izquierda o de vuelta al propio llamador de mensajes. Mientras que en la flecha se puede describir el mensaje que se está enviando de un objeto a otro, con diferentes puntas de flecha se puede indicar el tipo de mensaje que se está enviando o recibiendo.
+        </section>
+        <section data-markdown style="font-size: x-large">
+           ### Diagrama de Secuencia
+            **Mensajes**
+            * Mensaje sincrónico: Un mensaje sincrónico se utiliza cuando el emisor espera a que el receptor procese el mensaje y vuelva antes de continuar con otro mensaje.
+
+            * Mensaje asincrónico: Se utiliza cuando la persona que llama el mensaje no espera a que el receptor lo procese
+      </section>
+      <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Mensajes**
+
+            ![DiagramaSecuencia](img/DiagramaSecuenciaLineas.PNG)
+      </section>
+
+      <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Ejemplos**
+
+            ![DiagramaSecuencia](img/Ejemplo_1.PNG)
+
+            ![DiagramaSecuencia](img/Ejemplo_2.PNG)
+      </section>
+
+      <section data-markdown style="font-size: x-large">
+            ### Diagrama de Secuencia
+            **Ejemplos - Contratar servicio**
+
+            ![DiagramaSecuencia](img/Ejemplo_3.PNG)
+      </section>
+
+    </section>
+
+          <!-- FIN Diagrama de Secuencia -->
 
 			</div>
 		</div>
