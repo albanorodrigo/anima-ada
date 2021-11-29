@@ -6,7 +6,7 @@ dispone también de la información de los artículos que hay en existencia.</p>
 <p>Un proceso por lotes debe identificar diariamente de forma automática todos los Pedidos para los que hay
 disponibilidad como para cumplir las entregas, con el criterio de atender primero los Pedidos de mayor prioridad.</p>
 
-<p>La prioridad está determinada por una escala de 10 valores. A igual valor de prioridad se atienden primero los
+<p>La prioridad está determinada por una escala de 5 valores. A igual valor de prioridad se atienden primero los
 Pedidos más antiguos. El proceso emite un listado con los Pedidos en condiciones de cumplirse total o
 parcialmente, con los datos:</p>
 
